@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Beyond UI
 
-## Getting Started
+Beyond UI is a handcrafted, state-of-the-art editorial blog platform built with Next.js and Tailwind CSS. Designed to deliver a premium reading experience, it combines elegant typography, modern layout principles, and dynamic content integration for creators, designers, and engineers.
 
-First, run the development server:
+## ✨ Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Premium Editorial Aesthetic**: Carefully chosen typography blending `Geist` (Sans & Mono) with the classic elegance of `Playfair Display` for a sophisticated reading experience.
+- **Modern Edge-to-Edge Design**: A fully responsive, full-width layout that seamlessly adapts from mobile screens to ultra-wide desktop monitors.
+- **Dynamic Content Integration**: Built-in support for external API data fetching with a structured normalization layer, allowing you to easily plug in your CMS or mock data provider.
+- **Latest Tech Stack**: Powered by **Next.js 16 (App Router)** and styled utilizing the cutting-edge **Tailwind CSS v4** engine.
+- **High-Performance Architecture**: Optimized server components, layout structures, and standardized file routing.
+- **Accessible & Polished**: Thoughtful micro-details including custom scrollbars, stylized selection tokens, and integrated robust focus rings for accessible navigation.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Prerequisites
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+You will need Node.js 18.17+ and your preferred package manager (`npm`, `yarn`, `pnpm`, or `bun`).
 
-## Learn More
+### Installation
 
-To learn more about Next.js, take a look at the following resources:
+1. Clone the repository and navigate into the project directory:
+   ```bash
+   git clone <your-repository-url>
+   cd beyond-ui
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. Install the dependencies:
+   ```bash
+   npm install
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. Configure Environment Variables:
+   Create a `.env.local` file in the root directory and add your API endpoint. If you are using MockAPI or an alternative backend, structure it here.
+   ```env
+   NEXT_PUBLIC_API_URL=your_api_endpoint_here
+   ```
 
-## Deploy on Vercel
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📂 Project Structure
+
+- `src/app/` - Next.js App Router including root layouts, global CSS, and primary page endpoints.
+- `src/components/` - Modular React components categorized into:
+  - `home/` - Dashboard/home specific modules like `HeroFeaturedPost`, `RecentPostsGrid`, and `FeaturedPostsSidebar`.
+  - `layout/` - Global navigational scaffolding (`Navbar`, `Footer`).
+  - `blog/` - Card layouts and post specific UI abstractions.
+- `src/lib/` - Core utilities like API data fetching logic, data normalization, and mock-data configurations.
+
+## 🎨 Styling Architecture
+
+Beyond UI uses **Tailwind CSS v4** cleanly integrated.
+Global theme directives and custom CSS utilities are managed directly inside `src/app/globals.css`. Distinctive typography features are efficiently handled using Next.js `next/font/google` optimizations directly inside the root `layout.tsx`.
+
+## 🛠 Deployment
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new). Make sure to define your required Environment Variables in the Vercel dashboard prior to the final build.
+
+## 📄 License
+
+This project is open-sourced under the MIT License.
