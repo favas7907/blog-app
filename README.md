@@ -11,6 +11,8 @@ Beyond UI is a handcrafted, state-of-the-art editorial blog platform built with 
 - **High-Performance Architecture**: Optimized server components, layout structures, and standardized file routing.
 - **Accessible & Polished**: Thoughtful micro-details including custom scrollbars, stylized selection tokens, and integrated robust focus rings for accessible navigation.
 
+## Live Link : https://blog-app-eta-inky.vercel.app/
+
 ## 🚀 Getting Started
 
 ### Prerequisites
@@ -21,7 +23,7 @@ You will need Node.js 18.17+ and your preferred package manager (`npm`, `yarn`, 
 
 1. Clone the repository and navigate into the project directory:
    ```bash
-   git clone <your-repository-url>
+   git clone https://github.com/favas7907/blog-app.git
    cd beyond-ui
    ```
 
@@ -41,7 +43,7 @@ You will need Node.js 18.17+ and your preferred package manager (`npm`, `yarn`, 
    npm run dev
    ```
 
-5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. Open (http://localhost:3000) with your browser to see the result.
 
 ## 📂 Project Structure
 
