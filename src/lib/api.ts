@@ -1,9 +1,34 @@
-import type { BlogPost } from "./types";
+import type { BlogPost, MockApiPost } from "./types";
 import { FALLBACK_POSTS } from "./mock-data";
 
 export type { BlogPost } from "./types";
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL;
+
+// Helper to validate if a string looks like a URL or path
+function getValidUrl(url: string | undefined): string {
+  if (!url) return "";
+  if (url.startsWith("http") || url.startsWith("/")) return url;
+  return ""; // Returns empty string which triggers the UI fallback
+}
+
+// Helper to normalize MockAPI data or fallback to our schema
+function normalizePost(raw: MockApiPost): BlogPost {
+  return {
+    id: raw.id,
+    blog_heading: raw.blog_heading || raw.title || "Untitled",
+    blog_image: raw.blog_image || getValidUrl(raw.image),
+    blog_description: raw.blog_description || raw.content || "",
+    blogtext: raw.blogtext || raw.content || "",
+    topic: raw.topic || raw.category || "Article",
+    name: raw.name || raw.author || "Unknown Author",
+    avatar: raw.avatar || getValidUrl(raw.avatar),
+    month: raw.month || new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }),
+    job_roles: raw.job_roles || "Contributor",
+    quotes: raw.quotes || "",
+    para: raw.para || "",
+  };
+}
 
 export async function getPosts(): Promise<BlogPost[]> {
   if (!API_URL) {
@@ -28,7 +53,7 @@ export async function getPosts(): Promise<BlogPost[]> {
       return FALLBACK_POSTS;
     }
 
-    return data as BlogPost[];
+    return (data as MockApiPost[]).map(normalizePost);
   } catch (error) {
     console.error("[Beyond UI] Fetch failed:", error);
     return FALLBACK_POSTS;
@@ -45,8 +70,8 @@ export async function getPostById(id: string): Promise<BlogPost | null> {
       });
 
       if (res.ok) {
-        const data: BlogPost = await res.json();
-        if (data?.id) return data;
+        const data: MockApiPost = await res.json();
+        if (data?.id) return normalizePost(data);
       }
     } catch {
       // Fall through to local fallback lookup
@@ -65,9 +90,9 @@ export async function searchPosts(query: string): Promise<BlogPost[]> {
 
   return posts.filter(
     (post) =>
-      (post.blog_heading ?? "").toLowerCase().includes(lowerQuery) ||
-      (post.blog_description ?? "").toLowerCase().includes(lowerQuery) ||
-      (post.topic ?? "").toLowerCase().includes(lowerQuery) ||
-      (post.name ?? "").toLowerCase().includes(lowerQuery)
+      post.blog_heading.toLowerCase().includes(lowerQuery) ||
+      post.blog_description.toLowerCase().includes(lowerQuery) ||
+      post.topic.toLowerCase().includes(lowerQuery) ||
+      post.name.toLowerCase().includes(lowerQuery)
   );
 }

@@ -1,0 +1,44 @@
+[
+  {
+    "id": "1",
+    "title": "The Art of Minimal Interface Design",
+    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=1200",
+    "content": "Why clean, whitespace-driven design is overtaking the digital product landscape and reshaping how users interact with technology.",
+    "blogtext": "The web is entering an era of absolute clarity. Instead of heavy drop shadows and overwhelming gradient systems, designers now channel their energy into pure form — deliberate spacing, disciplined typography, and purposeful restraint. This shift isn't merely aesthetic; it's functional. Research consistently shows that minimalist interfaces reduce cognitive load, increase task-completion rates, and build user trust faster than cluttered alternatives.",
+    "topic": "Design",
+    "author": "Alex Rivera",
+    "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=100",
+    "month": "October 12, 2026",
+    "job_roles": "UX Architect",
+    "quotes": "A true masterpiece is perfectly balanced — nothing to add, nothing to remove.",
+    "para": "Minimalism isn't about having less. It's about making room for more."
+  },
+  {
+    "id": "2",
+    "title": "Server Components Changed Everything",
+    "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
+    "content": "A deep dive into how React Server Components fundamentally changed the way we architect modern web applications.",
+    "blogtext": "Server Components represent a genuine paradigm shift in React development. Unlike traditional components that render entirely on the client, Server Components execute on the server and ship only their HTML output — zero JavaScript bundle cost. This means your users download less code, see content faster, and interact with a page that feels instantly alive.",
+    "topic": "Engineering",
+    "author": "Sara Chen",
+    "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100",
+    "month": "October 10, 2026",
+    "job_roles": "Senior Software Engineer",
+    "quotes": "Speed is the single most important feature of the web.",
+    "para": "Embrace the server to keep your client bundle small."
+  },
+  {
+    "id": "3",
+    "title": "Building for Accessibility First",
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
+    "content": "Building inclusive experiences shouldn't be an afterthought — it's the defining characteristic of modern, ethical design.",
+    "blogtext": "Accessibility is more than regulatory compliance; it is usability for everyone. When you design accessible products, you don't just help users with disabilities — you improve the experience for all users across all contexts.",
+    "topic": "Product",
+    "author": "Marcus Johnson",
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100",
+    "month": "October 5, 2026",
+    "job_roles": "Product Lead",
+    "quotes": "Inclusivity is the true mark of good design.",
+    "para": "We must consider all edge cases and all users — not as an afterthought, but as the starting point."
+  }
+]

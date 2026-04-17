@@ -25,7 +25,8 @@ export default async function HomePage() {
 
   return (
     <div className="flex flex-col">
-      <section className="px-6 lg:px-10 pt-8 pb-6 md:pt-12 md:pb-10">
+      <section className="pt-8 pb-6 md:pt-12 md:pb-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
           <div className="lg:col-span-8 min-h-[520px]">
             <HeroFeaturedPost post={heroPost} />
@@ -34,10 +35,13 @@ export default async function HomePage() {
             <FeaturedPostsSidebar posts={sidebarPosts} />
           </div>
         </div>
+        </div>
       </section>
 
-      <section className="px-6 lg:px-10 py-12 md:py-16">
+      <section className="py-12 md:py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <RecentPostsGrid posts={recentPosts} />
+        </div>
       </section>
     </div>
   );

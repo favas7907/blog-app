@@ -61,7 +61,7 @@ export default async function BlogPostPage(props: {
 
   return (
     <article className="flex-1 flex flex-col">
-      <div className="px-6 lg:px-10 pt-8">
+      <div className="pt-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Link
           href="/blog"
           className="inline-flex items-center gap-2 text-muted hover:text-foreground transition-colors duration-200 text-sm font-medium"
@@ -71,7 +71,7 @@ export default async function BlogPostPage(props: {
         </Link>
       </div>
 
-      <header className="px-6 lg:px-10 pt-8 pb-8 max-w-3xl">
+      <header className="pt-8 pb-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center gap-3 mb-5">
           <span className="px-3 py-1 bg-accent/5 text-accent rounded-full text-[11px] font-semibold tracking-widest uppercase">
             {post.topic ?? "Article"}
@@ -88,7 +88,7 @@ export default async function BlogPostPage(props: {
         </p>
       </header>
 
-      <div className="px-6 lg:px-10 pb-8">
+      <div className="pb-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center gap-3.5 py-5 border-y border-border/60 max-w-3xl">
           <div className="relative size-11 rounded-full overflow-hidden bg-neutral-100 shrink-0">
             <Image src={avatarUrl} alt={post.name ?? "Author"} fill className="object-cover" />
@@ -102,7 +102,7 @@ export default async function BlogPostPage(props: {
         </div>
       </div>
 
-      <div className="px-6 lg:px-10 pb-12">
+      <div className="pb-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative w-full aspect-[16/9] max-h-[520px] overflow-hidden rounded-[20px] bg-neutral-100">
           <Image
             src={imageUrl}
@@ -115,7 +115,7 @@ export default async function BlogPostPage(props: {
         </div>
       </div>
 
-      <div className="px-6 lg:px-10 pb-20 max-w-3xl">
+      <div className="pb-20 max-w-3xl px-4 sm:px-6 lg:px-8">
         <div className="text-foreground/80 text-[17px] leading-[1.8] font-light space-y-6">
           {post.para && (
             <p className="text-xl md:text-2xl text-foreground font-normal leading-snug">

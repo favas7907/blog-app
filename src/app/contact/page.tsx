@@ -32,7 +32,8 @@ const CONTACT_ITEMS = [
 
 export default function ContactPage() {
   return (
-    <div className="flex-1 px-6 lg:px-10 py-12 md:py-20">
+    <div className="flex-1 py-12 md:py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="mb-14 md:mb-20 max-w-2xl">
         <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-foreground leading-[1.15] mb-4">
           Let&apos;s start a{" "}
@@ -162,6 +163,7 @@ export default function ContactPage() {
             </form>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );

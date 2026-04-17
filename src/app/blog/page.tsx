@@ -30,7 +30,8 @@ export default async function BlogPage(props: {
     : allPosts;
 
   return (
-    <div className="flex-1 px-6 lg:px-10 py-12 md:py-16">
+    <div className="flex-1 py-12 md:py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="max-w-2xl mx-auto text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground mb-4">
           <span className="font-serif italic font-normal">Journal</span>
@@ -72,6 +73,7 @@ export default async function BlogPage(props: {
           </p>
         </div>
       )}
+      </div>
     </div>
   );
 }

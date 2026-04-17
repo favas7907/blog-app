@@ -49,8 +49,8 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable}`}
     >
-      <body className="min-h-screen bg-neutral-500 antialiased">
-        <div className="w-full max-w-[1280px] mx-auto min-h-screen md:my-5 md:rounded-[28px] bg-white md:shadow-[0_8px_60px_-12px_rgba(0,0,0,0.15)] overflow-hidden flex flex-col">
+      <body className="min-h-screen w-full bg-white antialiased">
+        <div className="flex flex-col min-h-screen">
           <Navbar />
           <main className="flex-1 flex flex-col">{children}</main>
           <Footer />

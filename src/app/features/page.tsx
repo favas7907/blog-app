@@ -54,7 +54,8 @@ const FEATURES: Feature[] = [
 
 export default function FeaturesPage() {
   return (
-    <div className="flex-1 px-6 lg:px-10 py-12 md:py-20">
+    <div className="flex-1 py-12 md:py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center max-w-2xl mx-auto mb-14 md:mb-20">
         <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-foreground mb-4">
           The architecture of{" "}
@@ -83,6 +84,7 @@ export default function FeaturesPage() {
             </p>
           </div>
         ))}
+      </div>
       </div>
     </div>
   );

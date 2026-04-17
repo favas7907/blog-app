@@ -16,7 +16,7 @@ const STATS = [
 export default function AboutPage() {
   return (
     <div className="flex-1 flex flex-col">
-      <header className="px-6 lg:px-10 pt-16 md:pt-24 pb-12 text-center max-w-3xl mx-auto">
+      <header className="pt-16 md:pt-24 pb-12 text-center max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <span className="inline-block px-3 py-1 bg-accent/5 text-accent rounded-full text-[11px] font-semibold tracking-widest uppercase mb-6">
           About Us
         </span>
@@ -31,7 +31,7 @@ export default function AboutPage() {
         </p>
       </header>
 
-      <div className="px-6 lg:px-10 pb-16 md:pb-24">
+      <div className="pb-16 md:pb-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative w-full aspect-[21/9] min-h-[280px] overflow-hidden rounded-[20px] bg-neutral-100">
           <Image
             src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2000"
@@ -44,7 +44,8 @@ export default function AboutPage() {
         </div>
       </div>
 
-      <section className="px-6 lg:px-10 pb-20 md:pb-28">
+      <section className="pb-20 md:pb-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
           <div>
             <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-6">
@@ -85,6 +86,7 @@ export default function AboutPage() {
               ))}
             </div>
           </div>
+        </div>
         </div>
       </section>
     </div>
